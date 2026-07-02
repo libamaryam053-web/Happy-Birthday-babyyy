@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0f0f0f,#1a1a1a,#3b0a45);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+width:85%;
+max-width:420px;
+box-shadow:0 0 20px rgba(255,105,180,.4);
+backdrop-filter:blur(10px);
+}
+
+h1{
+color:#ff7eb3;
+}
+
+button{
+padding:15px 25px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#ff2f73;
+}
+
+#message{
+display:none;
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.heart{
+position:absolute;
+color:pink;
+font-size:22px;
+animation:float 5s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday My Love ❤️</h1>
+
+<p>
+Even though miles separate us,
+my heart is always with you.
+</p>
+
+<button onclick="showLove()">
+Click Me 💌
+</button>
+
+<div id="message">
+
+<p>
+Happy Birthday, my favorite person. ❤️<br><br>
+
+Thank you for making my life brighter every single day.
+
+I hope this year brings you happiness, success, peace, and everything you've ever wished for.
+
+No matter how many miles are between us, you'll always have my heart.
+
+I love you endlessly. ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showLove(){
+
+document.getElementById("message").style.display="block";
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💖";
+
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
